@@ -1,3 +1,118 @@
-body {
-  background: orange;
+a[target] {
+  background-color: yellow;
 }
+
+a[target=_blank] {
+  background-color: yellow;
+}
+
+[title~=rose] {
+  border: 5px solid yellow;
+}
+
+[class|=topcontent] {
+  background: yellow;
+}
+
+[class^="top"] {
+  background: yellow;
+}
+
+[class$="test"] {
+  background: yellow;
+}
+
+[class*="firsttest"] {
+  background: yellow;
+}
+
+input[type="text"] {
+  width: 150px;
+  display: block;
+  margin-bottom: 10px;
+  background-color: yellow;
+}
+
+input[type="button"] {
+  width: 120px;
+  margin-left: 35px;
+  display: block;
+}
+
+div p {
+  background-color: yellow;
+}
+
+div > p {
+  background-color: yellow;
+}
+
+div + p {
+  background-color: yellow;
+}
+
+div ~ p {
+  background-color: yellow;
+}
+
+/*Dynamic pseudo-classes*/
+.list-item:hover {
+  background-color: aliceblue;
+}
+
+.list a:link{
+  color: black;
+}
+
+.list a:active{
+  color: green;
+ }
+ 
+.list a:visited{
+  color: red;
+ }
+
+ /*Structural pseudo-classes*/
+ /*Method one: Using the :nth-child()*/
+.list-item:nth-child(2n-1){
+ background-color: slategrey;
+}
+
+/*Method two: Using the :nth-of-type()*/
+.list-item:nth-of-type(odd){
+ background-color: slategrey;
+}
+
+/*Pseudo-Elements*/
+.list-item::after {
+  background-image: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill="none" stroke="black" stroke-width="4" stroke-miterlimit="10" d="M4.75 1.5l6.5 6.5-6.5 6.5"/></svg>');
+  background-size: 8px 8px;
+  background-repeat: no-repeat;
+  content: '';
+  display: inline-block;
+  height: 8px;
+  margin-left: 4px;  
+  width: 16px;
+}
+
+/*CLASS SELECTOR*/
+.center {
+  text-align: center;
+  color: blue;
+}
+
+p.center {
+  text-align: center;
+  color: green;
+}
+
+p.center {
+  text-align: center;
+  color: red;
+}
+
+p.large {
+  font-size: 300%;
+}
+
+

@@ -1,10 +1,252 @@
 <html>
   <head>
-    <script src="script.js"></script>
-    <!-- <link rel="stylesheet" type="text/css" href="styles.css"> -->
+        <link rel="stylesheet" type="text/css" href="styles.css" />
+        <script>
+
+function formSubmit() {
+    document.forms["myForm"].submit();
+}
+</script>
+
+ <meta name="description" content="Free Web tutorials">
+  <meta name="keywords" content="HTML5,CSS,JavaScript">
+  <meta name="author" content="John Doe">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
   <body>
-    <h1>Hello there!</h1>
-    <a href="/me.html">My other page</a>
+    <h1>Session2 use cases - attribute selector</h1>
+
+    <h2>1. CSS [attribute] Selector</h2>
+<a href="http://www.disney.com" target="blank">disney.com</a>
+<a href="http://www.wikipedia.org">wikipedia.org</a>
+
+<h2>2. CSS [attribute="value"] Selector</h2>
+<a href="http://www.disney.com"  target="topcontent">disney.com</a>
+<a href="http://www.wikipedia.org" target="_blank">wikipedia.org</a>
+
+<h2>3. CSS [attribute~="value"] Selector</h2>
+<img src="C:\Users\saiswetha.v\Desktop\lotus.jfif" title="lotus" width="150" height="113">
+<img src="C:\Users\saiswetha.v\Desktop\rose.jfif" title="rose" width="224" height="162">
+
+<h2>4. CSS [attribute|="value"] Selector</h2>
+<h1 class="header">Hello</h1>
+<p class="text">Hello world!</p>
+<p class="topcontent">This is the fourth attributes</p>
+
+
+<h2>5. CSS [attribute^="value"] Selector</h2>
+<div class="top">The first div element.</div>
+<div class="second">The second div element.</div>
+
+
+<h2>6. CSS [attribute$="value"] Selector</h2>
+<div class="first">The first div element.</div>
+<div class="test">The second div element.</div>
+
+
+<h2>7. CSS [attribute*="value"] Selector</h2>
+<div class="firsttest">The first div element.</div>
+<div class="second">The second div element.</div>
+
+
+<h2>8. styling forms</h2>
+<form name="input" action="" method="get">
+  Firstname:<input type="text" name="Name" value="saiswetha" size="20">
+  Lastname:<input type="text" name="Name" value="vijayakumar" size="20">
+  <input type="button" value="Example Button">
+</form>
+
+
+<h1>COMBINATOR SELECTOR</h1>
+
+<h2>1. Descendant Selector</h2>
+<div>
+  <p>Paragraph 1 in the div.</p>
+  <section><p>Paragraph 2 in the div.</p></section>
+</div>
+  <p>Paragraph 3 in the div.</p>
+
+<h2>2. Child selector</h2>
+<div>
+  <p>Paragraph 1 in the div.</p>
+  <section><p>Paragraph 2 in the div.</p></section> <!-- not Child but Descendant -->
+  <p>Paragraph 3 in the div.</p>
+</div>
+<p>Paragraph 4. Not in a div.</p>
+<p>Paragraph 5. Not in a div.</p>
+
+<h2>3. Adjacent Sibling Selector</h2>
+<div>
+  <p>Paragraph 1 in the div.</p>
+</div>
+<p>Paragraph 2. Not in a div.</p>
+
+<h2>4. General Sibling Selector</h2>
+<p>Paragraph 1.</p>
+<div>
+  <p>Paragraph 2.</p>
+</div>
+<p>Paragraph 3.</p>
+<code>Some code.</code>
+<p>Paragraph 4.</p>
+
+
+<h1>PSEUDO SELECTOR</h1>
+<div class="container">
+  <h1>Top 5 Languages </h1>
+  <p>In the last year, developers collaborated in more than 370 primary languages on GitHub. The following are the the top five languages with more contributions on GitHub</p>
+  <div class="list">
+    <ul>
+      <li class="list-item"> <a href="#"> Javascript </a> </li>
+      <li class="list-item"> <a href="#"> Python </a> </li>
+      <li class="list-item"> <a href="#"> Java </a> </li>
+      <li class="list-item"> <a href="#"> PHP </a> </li>
+      <li class="list-item"> <a href="#"> C# </a> </li>
+    </ul>
+  </div
+</div>
+
+<h1>ELEMENT SELECTOR</h1>
+<div>
+  <p id="firstname">My name is saiswetha.</p>
+  <p id="hometown">I live in chennai.</p>
+</div>
+<p>My best friend is deepa.</p>
+
+<h1>ID SELECTOR</h1>
+<div class="intro">
+  <p id="firstname">My name is saiswetha.</p>
+  <p id="hometown">I live in chennai.</p>
+</div>
+<p>My best friend is deepa.</p>
+
+<h1>CLASS SELECTOR1</h1>
+<h2 class="center">Red and center-aligned heading</h2>
+<p class="center">Red and center-aligned paragraph.</p> 
+
+
+<h1>CLASS SELECTOR2</h1>
+<h1 class="center">This heading will not be affected</h1>
+<p class="center">This paragraph will be red and center-aligned.</p> 
+
+
+<h1>CLASS SELECTOR3</h1>
+<h1 class="center">This heading will not be affected</h1>
+<p class="center">This paragraph will be red and center-aligned.</p>
+<p class="center large">This paragraph will be red, center-aligned, and in a large font-size.</p> 
+
+<h1>NAME ATTRIBUTE</h1>
+<h2>The button name attribute</h2>
+<form action="/action_page.php" method="get">
+Choose your favorite subject:
+<button name="subject" type="submit" value="HTML">HTML</button>
+<button name="subject" type="submit" value="CSS">CSS</button>
+</form>
+
+<h2>The fieldset name attribute</h2>
+<form action="/action_page.php" method="get">
+<fieldset name="personalia">
+  <label for="fname">First name:</label>
+  <input type="text" id="fname" name="fname">
+</fieldset>
+<br>
+<button type="button" onclick="form.personalia.style.backgroundColor='yellow'">Change background color of fieldset</button>
+<input type="submit">
+</form>
+
+<h2>The form name attribute</h2>
+
+<form name="myForm" action="/action_page.php" method="get">
+  <label for="fname">First name:</label>
+  <input type="text" id="fname" name="fname"><br><br>
+  <label for="lname">Last name:</label>
+  <input type="text" id="lname" name="lname"><br><br>
+  <input type="button" onclick="formSubmit()" value="Send form data!">
+</form>
+
+<p>Notice that the JavaScript in the head section uses the name of the form to specify which form to submit.</p>
+
+<h2>The iframe name attribute</h2>
+
+<iframe src="demo_iframe.htm" name="iframe_a">
+<p>Your browser does not support iframes.</p>
+</iframe>
+
+<a href="https://www.w3schools.com" target="iframe_a">W3Schools.com</a>
+
+<p><b>Note:</b> Because the target of the link matches the name of the iframe, the link will open in the iframe.</p>
+
+
+<h2>The input name attribute</h2>
+
+<form action="/action_page.php">
+  <label for="fname">First name:</label>
+  <input type="text" id="fname" name="fname"><br><br>
+  <label for="lname">Last name:</label>
+  <input type="text" id="lname" name="lname"><br><br>
+  <input type="submit" value="Submit">
+</form>
+
+<h2>The map and area elements</h2>
+
+<p>Click on the computer, the phone, or the cup of coffee to go to a new page and read more about the topic:</p>
+
+<img src="workplace.jpg" alt="Workplace" usemap="#workmap" width="400" height="379">
+
+<map name="workmap">
+  <area shape="rect" coords="34,44,270,350" alt="Computer" href="computer.htm">
+  <area shape="rect" coords="290,172,333,250" alt="Phone" href="phone.htm">
+  <area shape="circle" coords="337,300,44" alt="Cup of coffee" href="coffee.htm">
+</map>
+
+<h2>META EXAMPLE</h2>
+<p>Some text...</p>
+
+
+<h2>The object name attribute</h2>
+
+<object data="pic_trulli.jpg" name="obj1" width="300" height="200">
+</object>
+
+<h2>The output element</h2>
+
+<form oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+<input type="range" id="a" value="50">
++<input type="number" id="b" value="25">
+=<output name="x" for="a b"></output>
+</form>
+
+<p><strong>Note:</strong> The output element is not supported in Edge 12 (or earlier).</p>
+
+<h2>The param element</h2>
+
+<object data="horse.wav">
+<param name="autoplay" value="true">
+</object>
+
+<h2>The select name attribute</h2>
+
+<p>The name attribute specifies the name for a drop-down list:</p>
+
+<form action="/action_page.php">
+  <label for="cars">Choose a car:</label>
+  <select name="cars" id="cars">
+    <option value="volvo">Volvo</option>
+    <option value="saab">Saab</option>
+    <option value="opel">Opel</option>
+    <option value="audi">Audi</option>
+  </select>
+  <br><br>
+  <input type="submit" value="Submit">
+</form>
+
+<h2>The textarea name attribute</h2>
+
+<form action="/action_page.php">
+<textarea rows="4" cols="50" name="comment">
+Enter text here...</textarea>
+<input type="submit">
+</form>
+
   </body>
 </html>
